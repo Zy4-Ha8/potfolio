@@ -24,23 +24,29 @@ function ProjectsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Real-time Chat App",
+              websiteLink: "eqarzone.com",
+              gitHubLink: "private",
+              title: "eqarzone",
               description:
-                "Full-stack chat application with Supabase real-time subscriptions and React frontend",
-              tech: ["React", "Supabase", "TypeScript"],
+                "website for showing and markeing for real estate with glassmorphism design and redux thunk ",
+              tech: ["React", "laravel", "redux-toolkit"],
               type: "Full Stack",
               icon: <Globe className="text-[#288f7e]" size={24} />,
             },
             {
-              title: "Task Management API",
+              websiteLink: "https://chloris-chronicles-blog.vercel.app/",
+              gitHubLink: "https://github.com/Zy4-Ha8/Chloris-Chronicles-Blog",
+              title: "blog website",
               description:
-                "RESTful API built with Express.js and PostgreSQL for task management system",
-              tech: ["Express.js", "PostgreSQL", "JWT"],
-              type: "Backend",
+                "Blog website contain many fetures made using react tailwind css with supabase for backend",
+              tech: ["React", "Tailwind CSS", "Supabase"],
+              type: "Full Stack",
               icon: <Server className="text-emerald-400" size={24} />,
             },
             {
-              title: "Portfolio Website",
+              websiteLink: "https://potfolio-tau-three.vercel.app/",
+              gitHubLink: "https://github.com/Zy4-Ha8/potfolio",
+              title: "portfolio Website",
               description:
                 "Responsive portfolio website with glassmorphism design and smooth animations",
               tech: ["React", "Tailwind CSS", "Framer Motion"],
@@ -50,7 +56,7 @@ function ProjectsSection() {
           ].map((project, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:transform hover:scale-105 transition-all duration-300 group"
+              className=" bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:transform hover:scale-105 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-4">
                 {project.icon}
@@ -79,14 +85,27 @@ function ProjectsSection() {
               </div>
 
               <div className="flex space-x-4">
-                <button className="flex items-center text-sm hover:text-[#288f7e] transition-colors">
+                <a
+                  href={project.websiteLink}
+                  className="flex items-center text-sm hover:text-[#288f7e] transition-colors"
+                >
                   <ExternalLink size={16} className="mr-1" />
                   Live Demo
-                </button>
-                <button className="flex items-center text-sm hover:text-[#288f7e] transition-colors">
-                  <Github size={16} className="mr-1" />
-                  Code
-                </button>
+                </a>
+                {project.gitHubLink === "private" ? (
+                  <h1 className="flex items-center text-sm hover:text-[#288f7e] transition-colors cursor-pointer">
+                    <Github size={16} className="mr-1" />
+                    this repo is private
+                  </h1>
+                ) : (
+                  <a
+                    href={project.gitHubLink}
+                    className="flex items-center text-sm hover:text-[#288f7e] transition-colors"
+                  >
+                    <Github size={16} className="mr-1" />
+                    Code
+                  </a>
+                )}
               </div>
             </div>
           ))}
