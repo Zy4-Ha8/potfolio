@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png";
+
 function NavBar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,8 +50,14 @@ function NavBar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 mobile-menu-container">
-          <div className="text-2xl font-bold bg-gradient-to-r from-[#288f7e] to-cyan-400 bg-clip-text text-transparent">
-            Portfolio
+          {/* <AlternativePharmDevLogo size={40} variant="molecular" /> */}
+          <div className="select-none cursor-pointer flex justify-between  transition-all duration-300 hover:scale-105">
+            <img src={logo} width={38} alt="" />
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold bg-gradient-to-r from-white to-[#288f7e] bg-clip-text text-transparent">
+                Haider.dev
+              </span>
+            </div>
           </div>
 
           {/* Desktop Menu */}
