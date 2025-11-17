@@ -24,7 +24,7 @@ function ProjectsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              websiteLink: "eqarzone.com",
+              websiteLink: "https://eqarzone.com",
               gitHubLink: "private",
               title: "eqarzone",
               description:

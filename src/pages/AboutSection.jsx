@@ -1,3 +1,5 @@
+import avatar from "../assets/avatar.jpg";
+
 function AboutSection() {
   return (
     <section id="about" className="py-20 px-4">
@@ -10,7 +12,7 @@ function AboutSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center ">
             <div>
               <div className="w-48 h-48 mx-auto bg-gradient-to-br from-[#288f7e] to-cyan-400 rounded-full flex items-center justify-center text-6xl font-bold">
-                DEV
+                <img className="w-full h-full rounded-2xl object-top-left object-cover " src={avatar} alt="" />
               </div>
             </div>
 
