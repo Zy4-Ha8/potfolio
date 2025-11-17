@@ -11,7 +11,7 @@ function AboutSection() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center ">
             <div>
-              <div className="w-48 h-48 mx-auto bg-gradient-to-br from-[#288f7e] to-cyan-400 rounded-2xl flex items-center justify-center text-6xl font-bold">
+              <div className="w-48 h-58 mx-auto bg-gradient-to-br from-[#288f7e] to-cyan-400 rounded-2xl flex items-center justify-center text-6xl font-bold">
                 <img className="w-full h-full rounded-2xl object-top-left object-cover " src={avatar} alt="" />
               </div>
             </div>
